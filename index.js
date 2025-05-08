@@ -5,6 +5,7 @@ const authRoutes = require('./routes/authRoutes');
 const bikeRoutes = require('./routes/bikeRoutes');
 const assemblyRoutes = require('./routes/assemblyRoutes');
 const registerRoutes = require('./routes/registerRoutes');
+const employeeRoutes = require('./routes/employeeRoutes');
 
 
 const app = express();
@@ -16,6 +17,7 @@ app.use('/api/login', authRoutes);
 app.use('/api/bikes', bikeRoutes);
 app.use('/api/assemblies', assemblyRoutes);
 app.use('/api/register', registerRoutes);
+app.use('/api/employees', employeeRoutes);
 
 
 sequelize.sync({ force: true }).then(async () => {
